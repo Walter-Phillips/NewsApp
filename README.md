@@ -1,0 +1,2 @@
+# NewsApp
+ just the news
