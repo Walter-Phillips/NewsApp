@@ -37,7 +37,6 @@ const Blogs = () => {
             <div>
               <h3 className="sourceName">
                 <span>{blog.source.name}</span>
-                <p>{blog.publishedAt}</p>
               </h3>
               <h1>{blog.title}</h1>
               <p>{blog.description}</p>
