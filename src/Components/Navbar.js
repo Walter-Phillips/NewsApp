@@ -13,7 +13,7 @@ import {
 import "../styling/navbar.css";
 
 const Navbar = () => {
-  const [inputValue, setInputValue] = useState("tech");
+  const [inputValue, setInputValue] = useState("");
   const isSignedIn = useSelector(selectSignedIn);
   const userData = useSelector(selectUserData);
 
@@ -29,9 +29,15 @@ const Navbar = () => {
     dispatch(setInput(inputValue));
   };
 
+  const handleKeypress = e => {
+  if (e.keyCode === 13) {
+    e.preventDefault();
+    dispatch(setInput(inputValue));
+    }
+  };
   return (
     <div className="navbar">
-      <h1 className="navbar__header">BlogMania 💬</h1>
+      <h1 className="navbar__header">NewsForYou</h1>
       {isSignedIn && (
         <div className="blog__search">
           <input
@@ -40,7 +46,7 @@ const Navbar = () => {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />
-          <button className="submit" onClick={handleClick}>
+          <button className="submit" onClick={handleClick} onKeyPress={handleKeypress}>
             Search
           </button>
         </div>
@@ -62,14 +68,14 @@ const Navbar = () => {
                 disabled={renderProps.disabled}
                 className="logout__button"
               >
-                Logout 😦
+                Logout 
               </button>
             )}
             onLogoutSuccess={logout}
           />
         </div>
       ) : (
-        <h1 className="notSignedIn">User not available 😞</h1>
+        <h1 className="notSignedIn">User not available</h1>
       )}
     </div>
   );

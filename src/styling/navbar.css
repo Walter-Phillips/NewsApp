@@ -6,7 +6,7 @@
   padding: 0px 80px;
   background: white;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  background: #1b1b1d;
+  background: #6a5acd;
   color: white;
 }
 
@@ -22,7 +22,7 @@
 
 .user {
   cursor: pointer;
-  border: 2px solid rgb(0, 255, 234);
+  border: 2px solid #261f55;
 }
 
 .signedIn {
@@ -36,7 +36,7 @@
   padding: 12px 25px;
   border-radius: 50px;
   border: none;
-  background: rgb(39, 39, 39);
+  background: #988de0;
   font-family: "Inter";
   color: white;
   font-size: 14px;
@@ -55,7 +55,7 @@
   padding: 10px 0px;
   margin: 0px 70px;
   justify-content: space-between;
-  background: rgb(39, 39, 39);
+  background: #988de0;
   border-radius: 5px;
 }
 
@@ -83,7 +83,7 @@
   padding: 12px 0px;
   border-radius: 5px;
   transition: 0.1s ease-in-out;
-  background: rgb(31, 31, 31);
+  background: #988de0;
   outline: none;
 }
 
